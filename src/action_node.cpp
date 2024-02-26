@@ -73,10 +73,8 @@ NodeStatus SyncActionNode::executeTick()
 using namespace boost::coroutines2;
 #endif
 
-#ifdef BT_BOOST_COROUTINE
 #include <boost/coroutine/all.hpp>
 using namespace boost::coroutines;
-#endif
 
 struct CoroActionNode::Pimpl
 {

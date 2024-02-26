@@ -1,6 +1,6 @@
 
 #include "behaviortree_cpp_v3/loggers/bt_minitrace_logger.h"
-#include "minitrace/minitrace.h"
+#include "3rdparty/minitrace/minitrace.h"
 
 namespace BT
 {
