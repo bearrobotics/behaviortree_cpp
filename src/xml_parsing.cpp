@@ -11,6 +11,7 @@
 */
 
 #include <functional>
+#include "filesystem/path.h"
 #include <list>
 
 #if defined(__linux) || defined(__linux__)
@@ -24,7 +25,6 @@
 
 #include "behaviortree_cpp_v3/xml_parsing.h"
 #include "private/tinyxml2.h"
-#include "filesystem/path.h"
 
 #ifdef USING_ROS
 #include <ros/package.h>
