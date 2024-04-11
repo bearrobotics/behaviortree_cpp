@@ -15,6 +15,7 @@ BT_SOURCE = [
     "src/condition_node.cpp",
     "src/control_node.cpp",
     "src/shared_library.cpp",
+    "src/shared_library_UNIX.cpp",
     "src/tree_node.cpp",
     "src/xml_parsing.cpp",
     "src/decorators/inverter_node.cpp",
@@ -42,7 +43,7 @@ cc_library(
     name = "behaviortree_cpp",
     srcs = BT_SOURCE,
     copts = [
-        "-DBT_BOOST_COROUTINE"
+        "-DBT_BOOST_COROUTINE2"
     ],
     linkopts = [
         "-fcoroutines",
@@ -54,7 +55,7 @@ cc_library(
         "src",
     ],
     deps = [
-        "@boost//:coroutine",
+        "@boost//:coroutine2",
     ],
     visibility = [
         "//visibility:public",
