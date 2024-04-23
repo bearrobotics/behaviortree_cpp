@@ -30,6 +30,7 @@ BT_SOURCE = [
     "src/controls/reactive_fallback.cpp",
     "src/controls/sequence_node.cpp",
     "src/controls/sequence_star_node.cpp",
+    "src/loggers/bt_zmq_publisher.cpp",
     "src/controls/switch_node.cpp",
     "src/controls/while_do_else_node.cpp",
     "src/loggers/bt_cout_logger.cpp",
@@ -43,7 +44,8 @@ cc_library(
     name = "behaviortree_cpp",
     srcs = BT_SOURCE,
     copts = [
-        "-DBT_BOOST_COROUTINE2"
+        "-DBT_BOOST_COROUTINE2",
+        "-DZMQ_FOUND",
     ],
     linkopts = [
         "-fcoroutines",
@@ -56,6 +58,7 @@ cc_library(
     ],
     deps = [
         "@boost//:coroutine2",
+        "@system_libs//:libzmq",
     ],
     visibility = [
         "//visibility:public",
