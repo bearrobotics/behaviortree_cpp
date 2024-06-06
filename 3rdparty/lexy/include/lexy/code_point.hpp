@@ -9,7 +9,7 @@
 #include <lexy/_detail/config.hpp>
 
 #ifndef LEXY_HAS_UNICODE_DATABASE
-#    define LEXY_HAS_UNICODE_DATABASE 0
+#    define LEXY_HAS_UNICODE_DATABASE 1
 #endif
 
 #if LEXY_HAS_UNICODE_DATABASE
